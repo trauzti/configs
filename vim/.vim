@@ -1,0 +1,1 @@
+/home/trauzti/dotfiles/_vim

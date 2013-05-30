@@ -1,0 +1,16 @@
+[user]
+    name = Trausti Sæmundsson
+	email = ******
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[push]
+    default = matching
+[core]
+    editor = vim
+[alias]
+    pub = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
+    sloth = "!f() { git push -u ${1:-sloth} `git symbolic-ref HEAD`; }; f"
