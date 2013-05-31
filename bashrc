@@ -35,3 +35,4 @@ alias python="python2"
 function pser () { aura -Ss $1; aura -As $1; } 
 
 source ~/secretrc
+source ~/configs/git-completion.bash
