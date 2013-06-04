@@ -6,5 +6,6 @@ cp ~/.vimrc vimrc
 cp ~/.gdbinit gdbinit 
 cp ~/.bashrc bashrc
 
+git add vim
 git commit -a -m"Update"
 git push origin master
