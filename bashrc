@@ -2,6 +2,7 @@
 [ -z "$PS1" ] && return
 . /usr/etc/profile.d/autojump.zsh
 #export PATH=$PATH:/opt/android/eclipse/:/opt/android/sdk/tools:/opt/android/sdk/platform-tools
+export PATH=$PATH:/home/trauzti/TriggerToolkit
 
 # Aliases and functions
 alias drop="dropbox stop && dropbox start"

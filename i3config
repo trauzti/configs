@@ -150,6 +150,8 @@ mode "monitor_select" {
 
   # at RU
   bindsym 2 exec xrandr --output HDMI1 --mode 1920x1080 --output  LVDS1 --mode 1366x768 --right-of HDMI1
+  
+  bindsym 3 exec xrandr --output HDMI1 --mode 1920x1080 --output  LVDS1 --mode 1366x768 --left-of HDMI1
 
   # If some workspaces are unreachable after unplugging, try mod+shift+r to reload i3
 

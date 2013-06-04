@@ -140,4 +140,5 @@ autocmd BufRead,BufNewFile *.py imap _pd from ipdb import set_trace; set_trace()
 set runtimepath^=~/.vim/bundle/gundo
 set runtimepath^=~/.vim/bundle/nerdtree
 set runtimepath^=~/.vim/bundle/taglist
+set runtimepath^=~/.vim/bundle/vim-fugitive
 nnoremap <silent> <F8> :TlistToggle<CR>
