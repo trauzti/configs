@@ -1,0 +1,12 @@
+ctrl_interface=/var/run/wpa_supplicant
+network={
+   ssid="CHANGETOSSID"
+   key_mgmt=WPA-EAP
+   eap=PEAP
+   phase2="auth=MSCHAPv2"
+   identity="CHANGETOUSERNAME"
+   password="CHANGETOPASSWORD"
+   psk=CHANGETOVERYLONGPSK
+}
+
+
