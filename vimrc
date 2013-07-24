@@ -109,7 +109,7 @@ map <buffer> <c-o> :w<CR>:!pdflatex "%" && rm "%:t:r".log && rm "%:t:r".aux && r
 "Ekkert auto-folding
 autocmd Filetype tex setlocal nofoldenable
 
-map <buffer> <c-p> :w<CR>:!/usr/bin/env python2 -i "%" <CR>
+map <buffer> <c-p> :w<CR>:!/usr/bin/env ipython2 -i "%" <CR>
 "map <buffer> <c-j> :w<CR>:!javac "%" && java "%:t:r"<CR>
 "map <buffer> <c-k> :w<CR>:!make "%:t:r" && ./"%:t:r"<CR>
 "map <buffer> <c-l> :w<CR>:!evince "%:t:r".pdf && rm "%:t:r".log<CR>
@@ -125,7 +125,7 @@ map <c-h> <c-w>h
 ab nmain if __name__ == "__main__": <tab>
 let &titleold=getcwd()
 
-autocmd BufRead,BufNewFile   *.c,*.h,*.cpp,*.hpp set tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufRead,BufNewFile   *.rb,*.c,*.h,*.cpp,*.hpp set tabstop=2 shiftwidth=2 softtabstop=2
 set mouse=a " Faster navigation
 set undodir=/home/trauzti/vimundo/
 set backupdir=/home/trauzti/vimbackup/
