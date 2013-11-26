@@ -112,7 +112,7 @@ autocmd Filetype tex setlocal nofoldenable
 map <buffer> <c-p> :w<CR>:!/usr/bin/env ipython2 -i "%" <CR>
 "map <buffer> <c-j> :w<CR>:!javac "%" && java "%:t:r"<CR>
 "map <buffer> <c-k> :w<CR>:!make "%:t:r" && ./"%:t:r"<CR>
-"map <buffer> <c-l> :w<CR>:!evince "%:t:r".pdf && rm "%:t:r".log<CR>
+map <buffer> <c-l> :w<CR>:!evince "%:t:r".pdf && rm "%:t:r".log<CR>
 
 
 " ctrl-jklm  changes to that split
@@ -125,7 +125,7 @@ map <c-h> <c-w>h
 ab nmain if __name__ == "__main__": <tab>
 let &titleold=getcwd()
 
-autocmd BufRead,BufNewFile   *.rb,*.c,*.h,*.cpp,*.hpp set tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufRead,BufNewFile   *.rb,*.c,*.h,*.cpp,*.hpp,*.hh,*.cc set tabstop=2 shiftwidth=2 softtabstop=2
 set mouse=a " Faster navigation
 set undodir=/home/trauzti/vimundo/
 set backupdir=/home/trauzti/vimbackup/
@@ -142,3 +142,4 @@ set runtimepath^=~/.vim/bundle/nerdtree
 set runtimepath^=~/.vim/bundle/taglist
 set runtimepath^=~/.vim/bundle/vim-fugitive
 nnoremap <silent> <F8> :TlistToggle<CR>
+nnoremap <silent> <Leader>t :CommandT<CR>

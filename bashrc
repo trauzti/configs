@@ -42,3 +42,40 @@ export RUBYOPT=rubygems
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source "$HOME/.rvm/scripts/rvm"
+function killname() {
+   if [ $1 ]
+   then
+       ps aux|grep $1
+       echo "Do you want to kill all those processes: (y/n)"
+       c=$(/usr/bin/sh -c "read -n 1 c; echo $c")
+       if [ "y" == "$c"]
+       then
+           echo "KILLING!"
+           #ps aux|grep $1 |awk '{print $2}'|xargs kill
+       fi
+   else 
+       echo "You must give an argument!"
+   fi
+}
+function stackpush() {
+    echo "$@" >> /home/trauzti/stack.txt
+}
+
+function stackgrep() {
+    grep $1 /home/trauzti/stack.txt
+}
+
+function stackcat() {
+    cat /home/trauzti/stack.txt
+}
+
+function stackpop() {
+    val=$(grep $1 /home/trauzti/stack.txt)
+    echo $val >> /home/trauzti/stackdone.txt
+    grep -v $val /home/trauzti/stack.txt > /home/trauzti/stack_tmp.txt
+    mv /home/trauzti/stack_tmp.txt /home/trauzti/stack.txt
+    echo "$val popped!"
+}
+
+export GOPATH=/home/trauzti/gocode
+export PATH=$PATH:$GOPATH/bin

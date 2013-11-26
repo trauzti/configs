@@ -180,7 +180,8 @@ bindsym Mod1+i exec amixer -c 0 set Master 5-
 
 # Keyboard
 #exec_always setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,is
-exec_always setxkbmap -layout 'us,is' -variant 'winkeys' -option 'grp:caps_toggle,grp_led:caps'
+#exec_always setxkbmap -layout 'us,is' -variant 'winkeys' -option 'grp:caps_toggle,grp_led:caps'
+exec_always setxkbmap -layout 'us,is' -variant 'winkeys' -option 'grp:switch,grp:alt_shift_toggle,grp_led:scroll'
 # Lock, suspend and hibernate
 bindsym Control+mod1+l exec i3lock -i /usr/share/backgrounds/gnome/FootFall.png -d
 bindsym Control+mod1+s exec i3lock -i /usr/share/backgrounds/gnome/FootFall.png && systemctl suspend
