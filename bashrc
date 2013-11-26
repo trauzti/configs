@@ -48,10 +48,10 @@ function killname() {
        ps aux|grep $1
        echo "Do you want to kill all those processes: (y/n)"
        c=$(/usr/bin/sh -c "read -n 1 c; echo $c")
-       if [ "y" == "$c"]
+       if [[ "y"  -eq "$c" ]]
        then
            echo "KILLING!"
-           #ps aux|grep $1 |awk '{print $2}'|xargs kill
+           ps aux|grep $1 |awk '{print $2}'|xargs kill
        fi
    else 
        echo "You must give an argument!"
@@ -79,3 +79,4 @@ function stackpop() {
 
 export GOPATH=/home/trauzti/gocode
 export PATH=$PATH:$GOPATH/bin
+function record_screen() { ffmpeg -f alsa -i pulse -f x11grab -r 30 -s 1366x768 -i :0.0 -acodec pcm_s16le -vcodec libx264  -threads 0 $1; }
