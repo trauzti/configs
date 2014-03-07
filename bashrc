@@ -76,7 +76,15 @@ function stackpop() {
     mv /home/trauzti/stack_tmp.txt /home/trauzti/stack.txt
     echo "$val popped!"
 }
+alias USA="timedatectl set-timezone America/Los_Angeles"
+alias IS="timedatectl  set-timezone Atlantic/Reykjavik"
 
 export GOPATH=/home/trauzti/gocode
 export PATH=$PATH:$GOPATH/bin
+
+
 function record_screen() { ffmpeg -f alsa -i pulse -f x11grab -r 30 -s 1366x768 -i :0.0 -acodec pcm_s16le -vcodec libx264  -threads 0 $1; }
+function uva() {
+    g++ $1.cpp -o $1 -lm -lcrypt -O2 -std=c++11 -pipe -DONLINE_JUDGE  
+}
+alias rm="rm -I"
