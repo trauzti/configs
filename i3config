@@ -170,7 +170,7 @@ bindsym Mod1+c exec mpc next
 bindsym Mod1+v exec mpc prev
 bindsym Mod1+space exec mpc toggle
 bindsym $mod+n exec nautilus
-bindsym $mod+c exec google-chrome
+bindsym $mod+c exec google-chrome-stable
 
 # Audio controls
 bindsym XF86_AudioRaiseVolume exec amixer -c 0 set Master 5+ unmute
